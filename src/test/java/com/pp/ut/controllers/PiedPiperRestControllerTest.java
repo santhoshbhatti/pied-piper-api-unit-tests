@@ -10,6 +10,8 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 @WebMvcTest(PiedPiperRestController.class)
 public class PiedPiperRestControllerTest {
 	
@@ -20,9 +22,13 @@ public class PiedPiperRestControllerTest {
 		
 		RequestBuilder builder = MockMvcRequestBuilders.get("/hello")
 				.accept(MediaType.APPLICATION_JSON);
-		MvcResult result=mockMvc.perform(builder).andReturn();
-		String responseBody=result.getResponse().getContentAsString();
-		assertEquals(responseBody, "Hello World");
+		MvcResult result=mockMvc
+				.perform(builder)
+				.andExpect(status().isOk())
+				.andExpect(content().string("Hello World"))
+				.andReturn();
+		//String responseBody=result.getResponse().getContentAsString();
+		//assertEquals(responseBody, "Hello World");
 	}
 	
 	

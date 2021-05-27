@@ -1,0 +1,8 @@
+insert into item (ID,NAME,PRICE,QUANTITY) values(10010,'rose-bud',10.4,10)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10011,'bygon-spary',20.5,20)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10012,'batata-wada',5.25,50)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10013,'ajji-lehiya',30.9,19)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10014,'ande-ka-funda',10.4,10)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10015,'kela',20.5,20)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10016,'bola',5.25,50)
+insert into item (ID,NAME,PRICE,QUANTITY) values(10017,'chavi',30.9,19)
